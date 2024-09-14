@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <title>Список минералов</title>
+</head>
+
+<body>
+<style>
+* {
+    margin: 0;
+    padding: 0;border: 0;
+}
+body {
+    font-family: Arial,Helvetica,Garuda,sans-serif;
+    font-size: 13px;
+    background: #edeef0 none repeat scroll 0 0;
+}
+.wrap {
+    background-color: #fff;
+    margin: auto;
+    display:table;
+}
+.wrap:last-child{
+    padding:0 0 0 0;
+}
+.page_block {
+    color: white;
+    text-align: center; 
+    word-break: break-all; /* Перенос слов */
+    display: table-cell;
+    float: left; /*Задаем обтекание*/
+}    
+.mineral_name {
+    color: #000;
+    text-decoration: none;
+}   
+sup {
+    bottom: 1ex;
+}
+sub {
+    top: 0.5ex;
+}
+sup, sub {
+    height: 0;
+    line-height: 1;
+    position: relative;
+    vertical-align: baseline;
+}
+.column_mineral_name {
+    width: 240px; 
+    text-align: left;
+}
+.column_formula {
+    width: 1235px; 
+    text-align: left;
+    height:auto;
+}
+.column_mineral_number {
+    width: 25px; 
+}
+
+@media screen and (min-width: 1600px) {
+    .wrap {width: 1500px;}
+}
+@media screen and (min-width: 1280px) and (max-width : 1599px) {
+    .wrap {width: 1100px;}
+    .column_formula {width: 835px;}
+}
+@media screen and (min-width: 1024px) and (max-width : 1279px){
+    .wrap {width: 1000px;}
+    .column_formula {width: 765px;}
+    .column_mineral_name {width: 210px;}
+}
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+    .wrap {width: 900px;}
+    .column_formula {width: 665px;}
+    .column_mineral_name {width: 210px;}
+}   
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .wrap {width: 700px;}
+    .column_formula {width: 465px;}
+    .column_mineral_name {width: 210px;}
+}
+@media screen and (min-width: 640px) and (max-width : 767px){
+    .wrap {width: 600px;}
+    .column_formula {width: 365px;}
+    .column_mineral_name {width: 210px;}
+}
+@media screen and (min-width: 480px) and (max-width : 639px){
+    .wrap div:first-child{
+        display:none;
+    }
+    .wrap {
+        width: 460px;
+        margin-bottom: 15px;
+        border-radius: 2px;
+        box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    }
+    .column_mineral_name {
+        width: 460px;
+        border-bottom: 1px solid #e7e8ec;
+        text-align: center;
+    }
+    .column_formula {
+        padding: 2px 0 2px 0;
+        width: 460px; 
+        text-align: center;
+    }
+    .page_block {
+        display:block;
+        float: none;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width : 479px){
+    .wrap div:first-child{
+        display:none;
+    }
+    .wrap {
+        width: 300px;
+        margin-bottom: 13px;
+        border-radius: 2px;
+        box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    }
+    .column_mineral_name {
+        width: 300px; 
+        text-align: center;
+    }
+    .column_formula {
+        padding: 2px 0 2px 0;
+        width: 300px; 
+        text-align: center;
+    }
+    .page_block {
+        display:block;
+        float: none;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 240px) and (max-width : 319px){
+    .wrap div:first-child{
+        display:none;
+    }
+    .wrap {
+        width: 240px;
+        margin-bottom: 13px;
+        border-radius: 2px;
+        box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    }
+    .column_mineral_name {
+        width: 240px; 
+        text-align: center;
+    }
+    .column_formula {
+        padding: 2px 0 2px 0;
+        width: 240px; 
+        text-align: center;
+    }
+    .page_block {
+        display:block;
+        float: none;
+    }
+    body {
+        font-size: 14px;
+    }
+} 
+@media screen and (max-width : 239px){
+    .wrap div:first-child{
+        display:none;
+    }
+    .wrap {
+        width: 170px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    }
+    .column_mineral_name {
+        width: 170px; 
+        text-align: center;
+    }
+    .column_formula {
+        padding: 2px 0 2px 0;
+        width: 170px; 
+        text-align: center;
+    }
+    .page_block {
+        display:block;
+        float: none;
+    }
+    body {
+        font-size: 15px;
+    }
+}
+/*font-family: "NeuchaRegular","Oxygen","Times New Roman",monospace;*/
+</style>
+
+<div class="page_wrap">
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">1.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Аллуайви&#x301;т</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Na<sub>19</sub>(Ca,Mn<sup>2+</sup>)<sub>6</sub>(Ti,Nb)<sub>3</sub>(Si<sub>3</sub>O<sub>9</sub>)<sub>2</sub>(Si<sub>10</sub>O<sub>28</sub>)<sub>2</sub>Cl·2H<sub>2</sub>O</span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">2.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Дуалит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Na<sub>30</sub>(Ca,Na,Ce,Sr)<sub>12</sub>(Na,Mn,Fe,Ti)<sub>6</sub>Zr<sub>3</sub>Ti<sub>3</sub>MnSi<sub>51</sub>O<sub>144</sub>(OH,H<sub>2</sub>O,Cl)<sub>9</sub></span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">3.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Икранит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">(Na,H<sub>3</sub>O)<sub>15</sub>(Ca,Mn)<sub>6</sub>Fe<sub>2</sub><sup>3+</sup>Zr<sub>3-4</sub>[Cl|{Si<sub>3</sub>O<sub>6</sub>(O,OH)<sub>3</sub>}<sub>2</sub>|(Si<sub>9</sub>O<sub>27</sub>)<sub>2</sub>·0-1 SiO] ·2-3 H<sub>2</sub>O</span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">4.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Раслакит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Na<sub>15</sub>Ca<sub>3</sub>Fe<sub>3</sub>(Na,Zr)<sub>3</sub>Zr<sub>3</sub>Nb<sub>&lt;0.5</sub>[(Cl,OH)|(Si<sub>3</sub>O<sub>9</sub>)<sub>2</sub>|(Si<sub>9</sub>O<sub>27</sub>)<sub>2</sub>·SiO]·3(OH,H<sub>2</sub>O)</span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">5.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Манганохомяковит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Na<sub>12</sub>Sr<sub>3</sub>Ca<sub>6</sub>(Mn<sup>2+</sup>,Fe<sup>2+</sup>)<sub>3</sub>Zr<sub>3</sub>(W,Nb)[(OH,Cl)|Si<sub>0.5</sub>(O,OH)<sub>2</sub>|Si<sub>3</sub>O<sub>9</sub>|Si<sub>9</sub>O<sub>27</sub>]<sub>2</sub></span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">6.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Карбокентбруксит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Na<sub>11.5</sub>(Na<sub>0.75</sub>Ce<sub>0.25</sub>)<sub>3</sub>Ca<sub>6</sub>Mn<sub>3</sub>Zr<sub>3</sub>Nb[(OH)<sub>3</sub>CO<sub>3</sub>(Si<sub>3</sub>O<sub>9</sub>)<sub>2</sub>(Si<sub>9</sub>O<sub>27</sub>)<sub>2</sub>·SiO]·H<sub>2</sub>O</span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">7.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Тасекит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Na<sub>12</sub>Sr<sub>3</sub>Ca<sub>6</sub>Fe<sub>3</sub>Zr<sub>3</sub>NbSi<sub>25</sub>O<sub>73</sub>(O<sub>0.6</sub>(OH)<sub>0.3</sub>(H<sub>2</sub>O)<sub>0.1</sub>)<sub>3</sub>Cl<sub>2</sub></span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">8.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Калиймагнезиогастингсит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">(K<sub>0.75</sub>Na<sub>0.25</sub>)Ca<sub>2</sub>(Mg<sub>0.55</sub>Fe<sub>0.3</sub>Fe<sub>0.1</sub>Al<sub>0.05</sub>)<sub>5</sub>(Si<sub>0.75</sub>Al<sub>0.25</sub>)<sub>8</sub>O<sub>22</sub>((OH)<sub>0.75</sub>Cl<sub>0.25</sub>)<sub>2</sub></span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">9.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Клино-ферро-ферри-фтор-хольмквистит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Li<sub>2</sub>(Fe<sup>2+</sup><sub>3</sub>Fe<sup>3+</sup><sub>2</sub>)Si<sub>8</sub>O<sub>22</sub>F<sub>2</sub></span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">10.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Ферроферрифторликит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">(Na,K)Na<sub>2</sub>Li(Fe<sup>2+</sup>,Mn<sup>2+</sup>,Mg)<sub>2</sub>Fe<sub>2</sub><sup>3+</sup>[(OH,F)|Si<sub>4</sub>O<sub>11</sub>]<sub>2</sub></span></div>
+</div>
+
+<div class="wrap">
+    <div class="page_block column_mineral_number"><span class="mineral_name">11.</span></div>
+    <div class="page_block column_mineral_name"><span class="mineral_name">Кентбруксит</span></div>
+    <div class="page_block column_formula"><span class="mineral_name">Na<sub>15</sub>(Ca<sub>0.6</sub>Ce<sub>0.3</sub>La<sub>0.1</sub>)<sub>6</sub>(Mn<sub>0.75</sub>Fe<sub>0.25</sub>)<sub>3</sub>Zr<sub>3</sub>Nb[O(F<sub>0.6</sub>Cl<sub>0.3</sub>(OH)<sub>0.1</sub>)Si<sub>3</sub>O<sub>9</sub>Si<sub>9</sub>O<sub>27</sub>]<sub>2</sub>·2H<sub>2</sub>O</span></div>
+</div>
+</div>
+</body>
+</html>
